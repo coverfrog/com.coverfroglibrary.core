@@ -1,6 +1,5 @@
 # com.coverfroglibrary.core
->> Step 0
->> Moudle 추가
+>>
 
 [ 명령어 ]
 git submodule add https://github.com/coverfrog/com.coverfroglibrary.core Assets/com.coverfroglibrary.core
@@ -10,6 +9,10 @@ git submodule add [A] [B]
 [A] = 저장할 저장소 ( 미리 생성이 되어 있어야 하고 패키지 배포를 위한 것이므로 Public 설정 )
 [B] = .git 을 기준으로 어디에 저장 할것인지? ( 미리 생성되어 있으면 안되고 미리 생성시 에러 )
 
+git submodule init
+git submodule update --remote
+
+-------------------------------------------------------------------------------------
 
 >> Step 1
 >> Runtime 폴더 추가
