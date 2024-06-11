@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "com.unity.package-manager-ui": "2.0.3",
+    "com.coverfroglibrary.core": "https://github.com/coverfrog/com.coverfroglibrary.core.git"
+  }
+}
