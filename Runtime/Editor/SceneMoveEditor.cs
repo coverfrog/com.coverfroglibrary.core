@@ -20,6 +20,27 @@ namespace CoverFrog
             window.titleContent = new GUIContent("Scene Window");
         }
 
+        private static List<string> BuildSceneNames
+        {
+            get
+            {
+                EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
+
+                List<string> scene_names = new List<string>(scenes.Length);
+
+                foreach (EditorBuildSettingsScene scene in scenes)
+                {
+                    string scene_path = scene.path;
+
+                    if (string.IsNullOrEmpty(scene_path) || !File.Exists(scene_path)) continue;
+
+                    scene_names.Add(scene_path);
+                }
+
+                return scene_names;
+            }
+        }
+
         private void OnGUI()
         {
             GUILayout.Label("Move Scenes", new GUIStyle() { 
@@ -35,7 +56,7 @@ namespace CoverFrog
 
             scrollPosition = GUILayout.BeginScrollView(scrollPosition);
 
-            foreach (string path in Util.BuildSceneNames)
+            foreach (string path in BuildSceneNames)
             {
                 string sceneName = Path.GetFileNameWithoutExtension(path);
 
