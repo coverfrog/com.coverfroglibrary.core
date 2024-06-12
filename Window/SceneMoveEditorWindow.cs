@@ -9,14 +9,14 @@ using System.IO;
 
 namespace CoverFrog
 {
-    public class SceneMoveEditor : EditorWindow
+    public class SceneMoveEditorWindow : EditorWindow
     {
         private Vector2 scrollPosition = Vector2.zero; 
 
         [MenuItem("__CoverFrog__/Scene Window")]
         public static void ShowWindow()
         {
-            var window = EditorWindow.GetWindow(typeof(SceneMoveEditor));
+            var window = EditorWindow.GetWindow(typeof(SceneMoveEditorWindow));
             window.titleContent = new GUIContent("Scene Window");
         }
 
