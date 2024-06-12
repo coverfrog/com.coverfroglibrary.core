@@ -5,6 +5,7 @@ using UnityEditor;
 
 namespace CoverFrog.Core.Editor
 {
+#if UNITY_EDITOR
     [CustomEditor(typeof(TestBuild))]
     public class TestBuildEditor : UnityEditor.Editor
     {
@@ -26,4 +27,5 @@ namespace CoverFrog.Core.Editor
             }
         }
     }
+#endif
 }
